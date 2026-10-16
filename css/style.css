@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary: #6c5ce7;
+    --primary-dark: #5443c9;
+    --secondary: #FF7F25;
+    --dark: #1e1e2f;
+    --light: #f5f6fa;
+    --text: #555555;
+    --white: #ffffff;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    color: var(--text);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,.08);
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+}
+.navbar ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover{
+    color: var(--secondary);
+}
+
+.btn{
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background-color: var(--secondary);
+}
+
+section{
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+#home{ background-color: #f0f0ff; }
+#about{ background-color: #fff0f0; }
+#services{ background-color: #f0fff0; }
+#portfolio{ background-color: #fffbe6; }
+#blog{ background-color: #f0faff; }
+#contact{ background-color: #f8f0ff; }
