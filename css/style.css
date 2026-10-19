@@ -81,9 +81,10 @@ section{
     padding: 40px 20px;
 }
 
-#portfolio{ background-color: #fffbe6; }
 #blog{ background-color: #f0faff; }
 #contact{ background-color: #f8f0ff; }
+
+
 /* ===== Hero ===== */
 
 .hero{
@@ -330,6 +331,66 @@ section{
   color: var(--white);
 }
 
+/* ===== Portfolio ===== */
+
+.portfolio{
+    min-height: auto;
+    padding: 90px 0;
+    background-color: var(--white);
+}
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.portfolio-item{
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.portfolio-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+.portfolio-item:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-overlay{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 24px;
+    background: linear-gradient(transparent 30%, rgba(30,30,47,.92));
+    color: var(--white);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.portfolio-item:hover .portfolio-overlay{
+    opacity: 1;
+}
+
+.portfolio-overlay h3{
+    margin-bottom: 6px;
+}
+
+.portfolio-overlay p{
+    color: var(--secondary);
+    font-size: 14px;
+    font-weight: 600;
+}
+
 
 @media (max-width: 768px){
     .hero h1{
@@ -338,5 +399,9 @@ section{
 
     .about-wrapper{
         grid-template-columns: 1fr;
+    }
+
+    .portfolio-overlay{
+        opacity: 1;
     }
 }
