@@ -300,7 +300,7 @@ section{
 
 .service-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 18px 20px rgba(169, 161, 163, 0.8);
+  box-shadow: 0 18px 20px rgba(108, 92, 231, .35);
 }
 
 .service-card h3{
