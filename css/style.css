@@ -672,6 +672,52 @@ html{ scroll-behavior: smooth; }
     font-size: 14px;
 }
 
+/* ===== Scroll Reveal ===== */
+
+.reveal{
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.show{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== Scroll-spy ===== */
+
+.navbar a.active{
+    color: var(--secondary);
+}
+
+/* ===== Form validation ===== */
+
+.form-group.error input,
+.form-group.error textarea{
+    border-color: #e74c3c;
+}
+
+.error-msg{
+    display: block;
+    color: #e74c3c;
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.form-status{
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+.form-status.success{ color: #27ae60; }
+.form-status.error{ color: #e74c3c; }
+
+.contact-form .btn:disabled{
+    opacity: .6;
+    cursor: not-allowed;
+}
+
 @media (max-width: 992px){
     .menu-toggle{
         display: flex;

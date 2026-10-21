@@ -97,14 +97,14 @@
 
                         </div>
                     </div>
-
+                    
                     <div class="stats">
-                        <div class="stat"><h3>120+</h3><p>Projects Done</p></div>
-                        <div class="stat"><h3>50+</h3><p>Happy Clients</p></div>
-                        <div class="stat"><h3>7+</h3><p>Years Experience</p></div>
-                        <div class="stat"><h3>15</h3><p>Team Members</p></div>
-
+                        <div class="stat"><h3 class="counter" data-target="120" data-suffix="+">0</h3><p>Projects Done</p></div>
+                        <div class="stat"><h3 class="counter" data-target="50" data-suffix="+">0</h3><p>Happy Clients</p></div>
+                        <div class="stat"><h3 class="counter" data-target="7" data-suffix="+">0</h3><p>Years Experience</p></div>
+                        <div class="stat"><h3 class="counter" data-target="15" data-suffix="">0</h3><p>Team Members</p></div>
                     </div>
+
                 </div>
 
             </section>
@@ -337,7 +337,7 @@
                         
                         </div>
                         
-                        <form class="contact-form" action="#" method="post">
+                        <form class="contact-form" id="contactForm" action="#" method="post" novalidate>
                             
                             <div class="form-row">
                                 
@@ -361,8 +361,12 @@
                                 <label for="message">Message</label>
                                 <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
                             </div>
+
+                            <input type="hidden" name="access_key" value="192872c7-01c5-4efc-85f9-1243954e79cd">
+                            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
                             
                             <button type="submit" class="btn">Send Message</button>
+                            <p class="form-status" id="formStatus"></p>
 
                         </form>
                     </div>
