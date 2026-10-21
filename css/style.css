@@ -76,6 +76,37 @@ body{
     background-color: var(--secondary);
 }
 
+.menu-toggle{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 26px;
+    height: 3px;
+    background-color: var(--dark);
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 section{
     min-height: 100vh;
     padding: 40px 20px;
@@ -564,6 +595,10 @@ html{ scroll-behavior: smooth; }
     transition: 0.3s;
 }
 
+.form-group textarea{
+    resize: vertical;
+}
+
 .form-group input:focus,
 .form-group textarea:focus{
     outline: none;
@@ -637,6 +672,46 @@ html{ scroll-behavior: smooth; }
     font-size: 14px;
 }
 
+@media (max-width: 992px){
+    .menu-toggle{
+        display: flex;
+    }
+
+    .nav-wrapper .btn{
+        margin-left: auto;
+        margin-right: 16px;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        box-shadow: 0 10px 20px rgba(0,0,0,.1);
+        display: none;
+    }
+
+    .navbar.active{
+        display: block;
+    }
+
+    .navbar ul{
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .navbar a{
+        display: block;
+        padding: 14px 20px;
+        border-top: 1px solid #eee;
+    }
+
+    .footer-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
 
 @media (max-width: 768px){
     .hero h1{
@@ -655,5 +730,28 @@ html{ scroll-behavior: smooth; }
     .form-row,
     .footer-grid{
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px){
+    .nav-wrapper .btn{
+        display: none;
+    }
+
+    .menu-toggle{
+        margin-left: auto;
+    }
+
+    .hero h1{
+        font-size: 30px;
+    }
+
+    .section-header h2,
+    .about-content h2{
+        font-size: 28px;
+    }
+
+    .contact-form{
+        padding: 22px;
     }
 }
